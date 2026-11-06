@@ -1,0 +1,27 @@
+{
+  "firestore": {
+    "database": "(default)",
+    "location": "southamerica-east1",
+    "rules": "firestore.rules"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "achados-perdidos-uespi",
+          "appId": "1:894423709654:android:2ad66fba4d68f0ddc55677",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "achados-perdidos-uespi",
+          "configurations": {
+            "android": "1:894423709654:android:2ad66fba4d68f0ddc55677",
+            "web": "1:894423709654:web:f18e78f5f44825d2c55677"
+          }
+        }
+      }
+    }
+  }
+}

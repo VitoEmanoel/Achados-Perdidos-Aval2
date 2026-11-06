@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "894423709654",
+    "project_id": "achados-perdidos-uespi",
+    "storage_bucket": "achados-perdidos-uespi.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894423709654:android:2ad66fba4d68f0ddc55677",
+        "android_client_info": {
+          "package_name": "br.uespi.achados_perdidos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgfhi2BxWaYtbv8ijXfULoK3qLJoAy314"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

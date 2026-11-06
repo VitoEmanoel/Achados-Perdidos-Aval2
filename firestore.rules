@@ -1,0 +1,30 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /lost_items/{itemId} {
+      allow read: if true;
+      allow create: if isValidItem(request.resource.data)
+        && request.resource.data.createdAt == request.time;
+      allow update: if isValidItem(request.resource.data)
+        && request.resource.data.createdAt == resource.data.createdAt;
+      allow delete: if true;
+    }
+
+    function isValidItem(item) {
+      return item.keys().hasOnly(['name', 'description', 'location', 'status', 'createdAt'])
+        && item.keys().hasAll(['name', 'description', 'location', 'status', 'createdAt'])
+        && isText(item.name, 60)
+        && isText(item.description, 200)
+        && isText(item.location, 60)
+        && item.status in ['lost', 'found'];
+    }
+
+    function isText(value, maxLength) {
+      return value is string
+        && value.trim().size() > 0
+        && value.size() <= maxLength;
+    }
+  }
+}
